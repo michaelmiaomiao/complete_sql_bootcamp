@@ -2,6 +2,7 @@ import psycopg2
 import sys
 import pprint
 
+
 def main():
     conn_string = "host='localhost' dbname='dvdrental' user='cohara' password='password'"
     print("Connecting to database: " + conn_string)
@@ -14,6 +15,9 @@ def main():
     records = cursor.fetchall()
 
     pprint.pprint(records)
+
+    conn.close()
+
 
 if __name__ == "__main__":
     main()
